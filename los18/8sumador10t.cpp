@@ -3,24 +3,22 @@ using namespace std;
 
 int main()
 {
-int x1;
-	int x2;
-	int x3;
-	int x4;
-	int x5;
-	int x6;
-	int x7;
-	int x8;
-	int x9;
-	int x10;
-cin>>x1;
-cin>>x2;
-cin>>x3;
-cin>>x4;
-cin>>x5;
-cin>>x6;
-cin>>x7;
-cin>>x8;
-cin>>x9;
-cin>>x10;
+	int a,b,c,d,e,f,g,h,i,j;
+
+cout<<"introduzca 10 numeros divididos por un espacio cada uno para obtener su suma"<<endl	;
+cin>>a;
+cin>>b;
+cin>>c;
+cin>>d;
+cin>>e;
+cin>>f;
+cin>>g;
+cin>>h;
+cin>>i;
+cin>>j;
+
+cout<<"la suma de "<<a<<"+"<<b<<"+"<<c<<"+"<<d<<"+"<<e<<"+"<<f<<"+"<<g<<"+"<<h<<"+"<<i<<"+"<<j<<endl;
+cout<<(a+b+c+d+e+f+g+h+i+j)<<endl;
+return 0;
+
 }
