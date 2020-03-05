@@ -55,7 +55,6 @@ int main(int argc, char*argv[]){
     cout<<mask[0]<<"."<<mask[1]<<"."<<mask[2]<<"."<<mask[3]<<"."<<endl;
     getRed(ip,mask);
     cout<<endl;
-    cout<<a<<e<<endl;
     getRes(ip,mask,ip2);
     
     
