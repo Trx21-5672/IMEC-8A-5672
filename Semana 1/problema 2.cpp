@@ -51,4 +51,3 @@ int main()
     EncontrarCuatroElementos(arr, n, X); 
     return 0; 
 }
-
