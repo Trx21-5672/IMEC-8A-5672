@@ -1,40 +1,53 @@
 #include <bits/stdc++.h> 
-#include<iostream>
-using namespace std;
+using namespace std; 
+  
 
-int con=0;
-int n,x,i,k,j,l;
-int e[100];
 
-int main()
-{
-	for ( i = 0; i <n - 3; i++) 
+void EncontrarCuatroElementos(int arr[], int n, int X) 
 { 
-    for ( j = i + 1; j <=n - 2; j++) 
-    {           
-        for ( k = j + 1; k <=n - 1; k++) 
-        {
-            for ( l = k + 1; l < n; l++) 
-	if (e[i] + e[j] + e[k] + e[l] == x)
-            if(con ==0 ){
-                cout << i+1<<", " << j+1  
-                     << ", " << k+1 << ", " << l+1<<endl;
-                     con+=+1;
-			}
-		}
-	}  
+    
+    unordered_map<int, pair<int, int> > mp; 
+    for (int i = 0; i < n - 1; i++) 
+        for (int j = i + 1; j < n; j++) 
+            mp[arr[i] + arr[j]] = { i, j }; 
+  
+   
+    for (int i = 0; i < n - 1; i++) { 
+        for (int j = i + 1; j < n; j++) { 
+            int sum = arr[i] + arr[j]; 
+  
+            // Si X - sum está presente en la tabla 
+            if (mp.find(X - sum) != mp.end()) { 
+  
+                pair<int, int> p = mp[X - sum]; 
+                if (p.first != i && p.first != j 
+                    && p.second != i && p.second != j) { 
+                    cout << arr[i] << ", "
+                         << arr[j] << ", "
+                         << arr[p.first] << ", "
+                         << arr[p.second]; 
+                    return; 
+                } 
+            } 
+        } 
+    } 
 } 
-	int n=sizeof(e) / sizeof(e[0]);
-{
-	cin>>n>>x;
-	for(i=1;i<=n;i++)
+
+int main() 
+{   int X,m,z;
+    cout<<"\nElementos en el arreglo y la suma requerida: ";
+    cin>>m>>X;
+    int arr[m]; 
+   
+    cout<<"\nEscribir los elementos del arreglo: ";
+    
+    for(int z=1;z<=m;z++)
 	{
-		cin>>e[i];
-}
-}
-	if(con==0)
-	{
-		cout<<"\n imposible";
-	}
-	return 0;
+		cin>>arr[z];
+		
+    }
+    
+    int n = sizeof(arr) / sizeof(arr[0]); 
+    EncontrarCuatroElementos(arr, n, X); 
+    return 0; 
 }
